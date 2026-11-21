@@ -11,12 +11,3 @@ dist/
 Thumbs.db
 *.log
 .vscode/
-
-# Local copyrighted chapter text and artwork: do not commit without permission
-/public/content/lotm/
-/public/content/coi/
-/public/assets/lotm/
-/public/assets/coi/
-
-# Downloadable project bundles
-*.zip
