@@ -1,0 +1,17 @@
+{
+  "name": "lotm-immersive-reader",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "manifest": "node scripts/generate-manifest.js",
+    "predev": "npm run manifest",
+    "prebuild": "npm run manifest",
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules/
+dist/
+.vite/
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+
+# Local copyrighted chapter text and artwork: do not commit without permission
+/public/content/lotm/
+/public/content/coi/
+/public/assets/lotm/
+/public/assets/coi/
+
+# Downloadable project bundles
+*.zip
