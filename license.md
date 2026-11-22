@@ -2,7 +2,7 @@
 
 ## 🎨 Artwork Credits
 
-The identifiers below are attribution leads for artwork in the local reference collection; individual files have not all been matched to their original posts or independently verified. Public availability and attribution do not grant permission to copy, modify, redistribute, or publicly display an artist's work. The supplied artwork is excluded from the code-only GitHub and Cloudflare Pages build until the necessary permissions are confirmed.
+The identifiers below are attribution leads for artwork in the local reference collection; individual files have not all been matched to their original posts or independently verified. Public availability and attribution do not grant permission to copy, modify, redistribute, or publicly display an artist's work.
 
 ### Volume 1 — Clown
 
@@ -56,7 +56,7 @@ The identifiers below are attribution leads for artwork in the local reference c
 
 **"Lord of the Mysteries" and its translations are not mine.** Not one word.
 
-The original novel belongs to **Cuttlefish That Loves Diving** (爱潜水的乌贼) and whoever publishes it officially. The English text in the local reference collection is assembled from fan translations; it is not included in the code-only GitHub or Cloudflare Pages build. This is a non-commercial hobby project with no ads, paid access, or content sales. An optional Buy Me a Coffee link is present, so voluntary contributions may be received. If an official release exists where you live, go give them your money.
+The original novel belongs to **Cuttlefish That Loves Diving** (爱潜水的乌贼) and whoever publishes it officially. The English text in the local reference collection is assembled from fan translations. This is a non-commercial hobby project with no ads, paid access, or content sales. An optional Buy Me a Coffee link is present, so voluntary contributions may be received. If an official release exists where you live, go give them your money.
 
 ### If something of yours is here and shouldn't be
 

@@ -234,7 +234,7 @@ async function homeView() {
             <span class="chapter-no">${String(c.number).padStart(4,"0")}</span>
             <span class="chapter-card-copy"><small>${c.category || "Lord of the Mysteries"}</small><b>${c.title}</b></span>
             <span class="arrow">${icon("right")}</span>
-          </button>`).join("") : `<p class="empty-state">No chapter content is included in this code-only repository. Add authorized local chapter files to browse and read.</p>`}</div>
+          </button>`).join("") : `<p class="empty-state">No recent chapters are available.</p>`}</div>
       </section>
       <section class="feature-section">
         <div class="feature-image">${lotm.chapters.length ? `<img src="/assets/lotm/backgrounds/backlund_city.webp" alt="A view of Backlund" loading="lazy">` : ""}</div>
@@ -274,7 +274,7 @@ async function libraryView() {
       <div class="series-tabs"><button class="${state.book === "lotm" ? "active" : ""}" data-action="switch-book" data-book="lotm">Lord of the Mysteries</button><button class="${state.book === "coi" ? "active" : ""}" data-action="switch-book" data-book="coi">Circle of Inevitability</button></div>
       <div class="search-box">${icon("search")}<input id="chapter-search" type="search" placeholder="Search all ${manifest.chapters.length.toLocaleString()} chapters..." value="${escapeHtml(state.query)}" aria-label="Search chapters"><kbd>⌘ K</kbd></div>
     </section>
-    ${!manifest.chapters.length ? `<section class="volume-catalog"><p class="empty-state">No chapter files are included. Add Markdown chapters you are authorized to use under <code>public/content/${state.book}/</code>, then run <code>npm run manifest</code>.</p></section>` : showChapterList ? `<section class="chapter-results">
+    ${showChapterList ? `<section class="chapter-results">
       <div class="volume-heading results-heading"><button class="back-volumes" data-action="back-volumes">${icon("left")} ${queryResults ? "CLEAR SEARCH" : "ALL VOLUMES"}</button><div><p>${queryResults ? `${visibleChapters.length} MATCHING CHAPTERS` : selected ? `VOLUME ${selected.number} · CHAPTERS ${selected.start}–${selected.end} · ${progressPercent}% READ` : "BONUS CONTENT"}</p><h2>${queryResults ? "Search results" : selected ? escapeHtml(selected.title) : "Side Stories & Bonus Content"}</h2></div></div>
       <div class="library-list">${visibleChapters.map(c => {
       const key = `${state.book}:${c.number}`;
@@ -289,10 +289,6 @@ async function libraryView() {
 }
 
 async function galleryView() {
-  const manifest = await loadManifest("lotm");
-  if (!manifest.chapters.length) {
-    return shell(`<main class="gallery-page"><section class="page-intro"><p class="eyebrow">THE COLLECTION</p><h1>Illustration Gallery</h1><p class="empty-state">Artwork is not included in this code-only repository. Add images you are authorized to use under <code>public/assets/</code>.</p></section></main>${footer()}`);
-  }
   const categories = [
     ["Characters","lotm/characters"],
     ["World","lotm/backgrounds"],

@@ -11,3 +11,9 @@ dist/
 Thumbs.db
 *.log
 .vscode/
+<<<<<<< HEAD
+=======
+
+# Downloadable project bundles
+*.zip
+>>>>>>> c19edd0 (Describe your change)

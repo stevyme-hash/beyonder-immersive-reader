@@ -4,19 +4,28 @@ Beyonder is an **unofficial, non-commercial fan project**. It is not affiliated 
 
 All names and works belong to their respective owners. **A non-commercial disclaimer, attribution, or public availability does not grant permission to redistribute copyrighted text or artwork.**
 
-## Content and artwork
+## Local reading
 
-This GitHub repository and its Cloudflare Pages build are **code-only**. The LOTM/COI chapter text, fan translations, and supplied illustrations are excluded from Git by `.gitignore` because redistribution permissions have not been confirmed. Artist credits are listed in [`license.md`](./license.md); credits are acknowledgements, not permission to copy or host artwork.
+Install the project dependencies and start the local development server:
 
-As a result, a Cloudflare deployment from this repository will show the reader interface without the chapters or artwork. Add third-party material only if you have the right to redistribute and publicly host each item. The application does not fetch chapter text or artwork from a remote source.
+```powershell
+npm install
+npm run dev
+```
 
-The local reference files remain on the development computer. A local build copies files from `public/` into `dist/` even when Git ignores them. Do not upload the existing local `dist/` folder or project ZIP; use a clean GitHub checkout for the code-only Cloudflare build.
+The chapter manifests are generated automatically by the `manifest` script before development and builds. Chapter text belongs in `public/content/lotm/` and `public/content/coi/`; artwork belongs in `public/assets/lotm/` and `public/assets/coi/`.
 
-For copyright or attribution questions, contact **ninjabhaicreator13@gmail.com**. Please identify the specific work and provide its original source.
+For a production build:
+
+```powershell
+npm run build
+```
+
+The generated website is written to `dist/`. For copyright or attribution questions, contact **ninjabhaicreator13@gmail.com**. Please identify the specific work and provide its original source.
 
 ## Deploy on Cloudflare Pages
 
-1. Push this code-only project to a GitHub repository.
+1. Push the project to a GitHub repository.
 2. In Cloudflare Pages, create a project connected to that repository.
 3. Use the repository root as the root directory.
 4. Set the build command to `npm run build`.
@@ -38,8 +47,8 @@ The encyclopedia avoids unsupported canon claims: the atlas is illustrative, exh
 
 ## Repository notes
 
-- `.gitignore` excludes local chapters and artwork. Do not force-add those files unless redistribution and hosting rights are confirmed.
-- Cloudflare Pages uses `npm run build` and the `dist/` output directory. Without chapter files, the deployed site displays setup guidance and keeps reading controls unavailable.
+- `.gitignore` excludes dependencies, build output, environment files, logs, editor settings, and ZIP archives.
+- Cloudflare Pages uses `npm run build` and the `dist/` output directory.
 - The custom [`license.md`](./license.md) contains credits and an owner-provided statement that the site engine is under the MIT License. It does not license third-party stories or artwork. GitHub may not identify a custom lowercase `license.md` as a standard MIT license; a standard root `LICENSE` file is needed for license detection.
 - `package.json` settings do not prevent using GitHub or Cloudflare Pages.
 
