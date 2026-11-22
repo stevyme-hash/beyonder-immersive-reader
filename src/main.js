@@ -396,7 +396,7 @@ async function render(transition = false) {
 function setupMotion() {
   motionObserver?.disconnect();
   const targets = app.querySelectorAll([
-    ".reveal", ".topbar", "footer", "main > section", ".section-heading",
+    ".reveal", ".topbar", "footer", "main > section:not(.chapter-results)", ".section-heading",
     ".book-object", ".chapter-card", ".volume-card", ".bonus-card",
     ".library-row", ".art-card", ".chapter-art", ".chapter-header",
     ".chapter-navigation", ".gallery-section", ".universe-heading",
@@ -571,13 +571,13 @@ function bind() {
       state.book = el.dataset.book; state.query = ""; state.selectedVolume = null; state.sideStories = false; state.route = "library"; await render(true); window.scrollTo(0, 0);
     }
     if (action === "select-volume") {
-      state.selectedVolume = Number(el.dataset.volume); state.sideStories = false; state.query = ""; await render(true);
+      state.selectedVolume = Number(el.dataset.volume); state.sideStories = false; state.query = ""; await render(true); window.scrollTo(0, 0);
     }
     if (action === "select-side-stories") {
-      state.selectedVolume = null; state.sideStories = true; state.query = ""; await render(true);
+      state.selectedVolume = null; state.sideStories = true; state.query = ""; await render(true); window.scrollTo(0, 0);
     }
     if (action === "back-volumes") {
-      state.selectedVolume = null; state.sideStories = false; state.query = ""; await render(true);
+      state.selectedVolume = null; state.sideStories = false; state.query = ""; await render(true); window.scrollTo(0, 0);
     }
     if (action === "continue") {
       state.book = state.lastRead?.book || "lotm";
