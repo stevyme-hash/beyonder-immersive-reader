@@ -361,19 +361,7 @@ function narrationBar(chapter) {
 }
 
 function footer() {
-  return `<section class="creator-support" aria-labelledby="creator-support-title">
-    <span class="support-sigil" aria-hidden="true">✦</span>
-    <div class="creator-support-inner">
-      <p class="eyebrow">A GESTURE OF SUPPORT</p>
-      <h2 id="creator-support-title">Support This Project</h2>
-      <p class="creator-support-message">Your support helps me continue developing and improving this immersive reading experience. Every coffee is entirely optional, and deeply appreciated.</p>
-      <a class="coffee-button" href="${escapeHtml(siteConfig.buyMeACoffeeUrl)}" target="_blank" rel="noopener noreferrer">
-        <span class="coffee-button-icon" aria-hidden="true">☕</span><span>Buy Me a Coffee</span><span class="coffee-button-arrow" aria-hidden="true">↗</span>
-      </a>
-      <small class="creator-support-note">No pressure—thank you for exploring the chronicles.</small>
-    </div>
-  </section>
-  <footer><button data-action="home" class="footer-brand">Beyonder</button><p class="legal-disclaimer">Beyonder is an unofficial, non-commercial fan project. It is not affiliated with or endorsed by the author, Webnovel, or Yen Press, and it earns no money. All names and works belong to their respective owners.</p><div><button data-action="about">About</button></div></footer>`;
+  return `<footer><button data-action="home" class="footer-brand">Beyonder</button><p class="legal-disclaimer">Beyonder is an unofficial, non-commercial fan project. It is not affiliated with or endorsed by the author, Webnovel, or Yen Press, and it earns no money. All names and works belong to their respective owners.</p><div><button data-action="about">About</button></div></footer>`;
 }
 
 async function render(transition = false) {
@@ -415,8 +403,7 @@ function setupMotion() {
     ".character-card", ".location-card", ".artifact-card",
     ".universe-detail:not([hidden])", ".journal-columns > section",
     ".history-section", ".history-row", ".streak-card", ".achievement-card",
-    ".universe-nav", ".club-copy", ".club-table", ".narration-bar",
-    ".creator-support"
+    ".universe-nav", ".club-copy", ".club-table", ".narration-bar"
   ].join(","));
   const showAll = () => targets.forEach(element => element.classList.add("is-visible"));
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
