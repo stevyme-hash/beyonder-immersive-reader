@@ -1,6 +1,6 @@
 # Beyonder — Immersive Reader
 
-Beyonder is an **unofficial, non-commercial fan project**. It is not affiliated with or endorsed by the author, Webnovel, or Yen Press. The project does not run ads, charge for access, or sell content. It does include an optional [Buy Me a Coffee](https://buymeacoffee.com/stevy_me) link, so voluntary contributions may be received.
+Beyonder is an **unofficial, non-commercial fan project**. It is not affiliated with or endorsed by the author, Webnovel, or Yen Press. The project does not run ads, charge for access, or sell content.
 
 All names and works belong to their respective owners. **A non-commercial disclaimer, attribution, or public availability does not grant permission to redistribute copyrighted text or artwork.**
 
